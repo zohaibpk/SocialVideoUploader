@@ -1,0 +1,57 @@
+name: Bug report
+description: Report a reproducible problem in the API, frontend, upload flow, or processing pipeline.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Please include enough detail to reproduce it reliably.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Where is the bug happening?
+      options:
+        - API
+        - Frontend
+        - FFmpeg / processing
+        - Upload / storage
+        - Platform validation
+        - GitHub / documentation
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the bug clearly and include the expected behavior.
+      placeholder: A short summary of the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the exact steps needed to reproduce the issue.
+      placeholder: |
+        1. Open...
+        2. Upload...
+        3. Click...
+        4. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Share version and runtime details if relevant.
+      placeholder: Windows version, browser, .NET SDK, Node.js, FFmpeg version, etc.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, screenshots, or error output
+      description: Paste any useful errors, stack traces, API responses, or screenshots.
+      render: text
+

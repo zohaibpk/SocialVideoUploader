@@ -1,0 +1,52 @@
+name: Feature request
+description: Suggest a feature, workflow improvement, or new platform capability.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. Clear product context helps prioritize the request.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: What part of the project does this request affect most?
+      options:
+        - Platform publishing
+        - Upload planning
+        - Video processing
+        - OAuth / account connections
+        - Frontend UX
+        - API design
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What problem are you trying to solve?
+      placeholder: Describe the pain point or missing capability.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the feature or behavior you would like to see.
+      placeholder: Explain the preferred solution in practical terms.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: List any alternative approaches, compromises, or related ideas.
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
+      description: Include examples, platform notes, API constraints, or mockups if helpful.
+
